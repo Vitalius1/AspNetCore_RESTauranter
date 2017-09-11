@@ -1,0 +1,12 @@
+/*Write all of your CSS here*/
+input{
+    display: block;
+}
+textarea{
+    display: block;
+}
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}

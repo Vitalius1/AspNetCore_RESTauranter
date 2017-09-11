@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model RESTauranter.Models.Review
+<h1>Write a New Review!</h1>
+
+<form  asp-controller="Home" asp-action="Post" method="post" class="pure-form pure-form-stacked">
+    
+    <label asp-for="RevName"></label>
+    <input asp-for="RevName"/>
+    <span asp-validation-for="RevName"></span>
+    <br>
+    <label asp-for="ResName"></label>
+    <input asp-for="ResName"/>
+    <span asp-validation-for="ResName"></span>
+    <br>
+    <label asp-for="Content"></label>
+    <textarea asp-for="Content" rows="3" cols="30"></textarea>
+    <span asp-validation-for="Content"></span>
+    <br>
+    <label asp-for="Stars"></label>
+    <select asp-for="Stars"/>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <span asp-validation-for="Stars"></span>
+    <br>
+    <br>
+    <label asp-for="DateVisited"></label>
+    <input asp-for="DateVisited"/>
+    <span asp-validation-for="DateVisited"></span>
+    <br>
+    <input type="submit" value="Submit!">
+</form>
+<p>@ViewBag.DateError</p>
